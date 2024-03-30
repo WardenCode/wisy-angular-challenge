@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="title">Weather Forecast: {{ weatherAreaCode }}</h1>
+  <div
+    class="chart_container"
+    *ngIf="weatherForecastInfo$ | async as weatherForecastInfo"
+  >
+    <weather-chart
+      *ngIf="weatherForecastInfo.length !== 0"
+      [periods]="weatherForecastInfo"
+    ></weather-chart>
+  </div>
+</div>
