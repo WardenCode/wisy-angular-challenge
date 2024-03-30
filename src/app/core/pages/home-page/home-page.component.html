@@ -1,0 +1,9 @@
+<div class="container">
+  <ng-container *ngFor="let link of links">
+    <mat-card appearance="raised" class="card" [routerLink]="link.path">
+      <mat-card-content>
+        {{ link.label }}
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
